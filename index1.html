@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continental Hotel Reservation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: #d3d3d3;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #ff0000;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            border: 2px solid #333;
+        }
+
+        td:first-child {
+            background-color: #b3d9ff;
+            font-weight: bold;
+            text-align: right;
+            width: 30%;
+            font-size: 18px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="datetime-local"],
+        input[type="date"] {
+            width: 95%;
+            padding: 8px;
+            border: 1px solid #999;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        .departure-row td:last-child {
+            display: flex;
+            gap: 10px;
+        }
+
+        .departure-row input {
+            flex: 1;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Continental Hotel Reservation Form</h1>
+        <form>
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" placeholder="Enter your name" required></td>
+                </tr>
+                <tr>
+                    <td>eMail</td>
+                    <td><input type="email" value="info@continental.pk" required></td>
+                </tr>
+                <tr>
+                    <td>Mobile No</td>
+                    <td><input type="tel" placeholder="Enter your cell number" required></td>
+                </tr>
+                <tr>
+                    <td>Arrival Time</td>
+                    <td><input type="datetime-local" required></td>
+                </tr>
+                <tr class="departure-row">
+                    <td>Departure</td>
+                    <td>
+                        <input type="date" required>
+                        <input type="date" required>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit Reservation">
+        </form>
+    </div>
+</body>
+</html>
